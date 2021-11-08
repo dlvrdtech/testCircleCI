@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/dlvrdtech/testCircleCI/issues"
   },
-  "homepage": "https://github.com/dlvrdtech/testCircleCI#readme"
+  "homepage": "https://github.com/dlvrdtech/testCircleCI#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
