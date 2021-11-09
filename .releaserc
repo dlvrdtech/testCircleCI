@@ -1,7 +1,13 @@
 {
   "plugins": [
-    ["@semantic-release/npm", {
-      "npmPublish": false,
-    }],
-  ]
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/github",
+    ["@semantic-release/exec", {
+      "prepareCmd" : "set-version ${nextRelease.version}",
+      "publishCmd" : "publish-package"
+      }]
+  ],
+  "release": {
+    "branches": ["main"]
+  }
 }
