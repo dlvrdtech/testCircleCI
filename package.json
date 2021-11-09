@@ -20,6 +20,6 @@
     "lodash": "^4.17.21"
   },
   "release": {
-    "branches": ["master"]
+    "branches": ["main"]
   }
 }
