@@ -3,7 +3,5 @@
     "@semantic-release/commit-analyzer",
     "@semantic-release/github"
   ],
-  "release": {
-    "branches": ["main"]
-  }
+  "branches": ["main"]
 }
