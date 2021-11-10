@@ -20,8 +20,6 @@ jobs:
           name: def
           command: |
             echo 'export DEPLOYMENT_TAG=abcd' >> $BASH_ENV
-            source $BASH_ENV
-            echo $DEPLOYMENT_TAG
       - run: echo $DEPLOYMENT_TAG
   someotherthing:
     docker:
