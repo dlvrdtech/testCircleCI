@@ -16,9 +16,20 @@ jobs:
             branches:
               only:
                 - main
-
+      - run:
+          name: def
+          command: echo 'export DEPLOYMENT_TAG=abcd' >> $BASH_ENV
+  someotherthing:
+    docker:
+      - image: cimg/node:16.13.0
+    steps:
+      - checkout
+      - run:
+          name: abc
+          command: echo $DEPLOYMENT_TAG
 # Invoke jobs via workflows
 workflows:
   build_deploy_master:
     jobs:
       - something
+      - someotherthing
