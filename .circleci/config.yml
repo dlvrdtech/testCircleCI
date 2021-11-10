@@ -21,6 +21,7 @@ jobs:
           command: |
             echo 'export DEPLOYMENT_TAG=abcd' >> $BASH_ENV
             source $BASH_ENV
+            echo $DEPLOYMENT_TAG
   someotherthing:
     docker:
       - image: cimg/node:16.13.0
