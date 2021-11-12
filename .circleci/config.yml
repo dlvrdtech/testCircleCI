@@ -20,9 +20,9 @@ jobs:
           name: def
           command: |
             export DEF=$ABC
+            echo $DEF
             echo 'export DEPLOYMENT_TAG=abcd' >> $BASH_ENV
       - run: echo $DEPLOYMENT_TAG
-      - run: echo $DEF
   someotherthing:
     docker:
       - image: cimg/node:16.13.0
