@@ -19,7 +19,7 @@ jobs:
       - run:
           name: def
           command: |
-            bash ./test.sh
+            source ./test.sh
             echo $DEF
             echo 'export DEPLOYMENT_TAG=abcd' >> $BASH_ENV
       - run: echo $DEPLOYMENT_TAG

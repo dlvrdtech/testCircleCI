@@ -1,6 +1,4 @@
 #!/bin/bash
 set -e
 
-echo works
-echo $ABC
-DEF=$ABC
+export DEF=$ABC
