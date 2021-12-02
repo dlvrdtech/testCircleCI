@@ -6,9 +6,11 @@ orbs:
 jobs:
   something:
     docker:
-      - image: cimg/node:16.13.0
+      - image: google/cloud-sdk
     steps:
       - checkout
+      - node/install
+          node-version: 16.13.0
       # - run:
       #     name: abc
       #     command: npx semantic-release
@@ -23,6 +25,7 @@ jobs:
             echo $DEF
             echo 'export DEPLOYMENT_TAG=abcd' >> $BASH_ENV
       - run: echo $DEPLOYMENT_TAG
+      - run: node -v
   someotherthing:
     docker:
       - image: cimg/node:16.13.0
