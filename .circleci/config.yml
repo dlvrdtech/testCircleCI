@@ -9,7 +9,7 @@ jobs:
       - image: google/cloud-sdk
     steps:
       - checkout
-      - node/install
+      - node/install:
           node-version: 16.13.0
       # - run:
       #     name: abc
